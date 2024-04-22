@@ -82,26 +82,20 @@ public class App {
 	
 	public static void getMensualite(Double montantDemande, byte tauxAnnuel, short montantMensualite, Double partMensualite, byte dateEffect, Client client) {
 		System.out.println("Veuillez saisir le montant demandé : ");
-		// montantDemande = sc.nextShort();
+		montantDemande = sc.nextDouble();
 		
 		
 		System.out.println("Veuillez saisir le taux annuel :");
-		// tauxAnnuel = sc.nextByte();	
+		tauxAnnuel = sc.nextByte();	
 		
 		System.out.println("Veuillez saisir la durée en mois :");
-		// dateEffect = sc.nextByte();
+		dateEffect = sc.nextByte();
 		
 		System.out.println("Veuillez saisir la date d'effet au format MM/yyyy :");
-		// String dateString = sc.next();
+		String dateString = sc.next();
 		
 		
 		// Partie traitement - calcul de la mensualité
-		
-		montantDemande = 1000D;
-		tauxAnnuel = 1;
-		dateEffect = 12;
-		String dateString = "02/2023";
-		
 		partMensualite = montantDemande * tauxAnnuel / (1 - Math.pow(1 + tauxAnnuel, -dateEffect));
 		partMensualite = partMensualite / 12;
 		
